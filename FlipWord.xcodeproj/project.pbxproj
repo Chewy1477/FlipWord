@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		836466FC1DEA894E008DCC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836466FB1DEA894E008DCC9A /* AppDelegate.swift */; };
-		836466FE1DEA894E008DCC9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836466FD1DEA894E008DCC9A /* ViewController.swift */; };
-		836467011DEA894E008DCC9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836466FF1DEA894E008DCC9A /* Main.storyboard */; };
+		836466FE1DEA894E008DCC9A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836466FD1DEA894E008DCC9A /* GameViewController.swift */; };
 		836467031DEA894E008DCC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836467021DEA894E008DCC9A /* Assets.xcassets */; };
 		836467061DEA894E008DCC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836467041DEA894E008DCC9A /* LaunchScreen.storyboard */; };
 		836467111DEA894E008DCC9A /* FlipWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836467101DEA894E008DCC9A /* FlipWordTests.swift */; };
 		8364671C1DEA894E008DCC9A /* FlipWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364671B1DEA894E008DCC9A /* FlipWordUITests.swift */; };
+		8364672F1DEAA1EA008DCC9A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364672E1DEAA1EA008DCC9A /* Button.swift */; };
+		83F704581DF659B900B44C1F /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F704571DF659B900B44C1F /* EndViewController.swift */; };
+		83F7045A1DF6614300B44C1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F704591DF6614300B44C1F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +38,7 @@
 /* Begin PBXFileReference section */
 		836466F81DEA894E008DCC9A /* FlipWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836466FB1DEA894E008DCC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		836466FD1DEA894E008DCC9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		836467001DEA894E008DCC9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		836466FD1DEA894E008DCC9A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		836467021DEA894E008DCC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		836467051DEA894E008DCC9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		836467071DEA894E008DCC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		836467171DEA894E008DCC9A /* FlipWordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlipWordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8364671B1DEA894E008DCC9A /* FlipWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipWordUITests.swift; sourceTree = "<group>"; };
 		8364671D1DEA894E008DCC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8364672E1DEAA1EA008DCC9A /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		83F704571DF659B900B44C1F /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
+		83F704591DF6614300B44C1F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +101,12 @@
 		836466FA1DEA894E008DCC9A /* FlipWord */ = {
 			isa = PBXGroup;
 			children = (
-				836466FB1DEA894E008DCC9A /* AppDelegate.swift */,
-				836466FD1DEA894E008DCC9A /* ViewController.swift */,
-				836466FF1DEA894E008DCC9A /* Main.storyboard */,
+				8364672B1DEA8A72008DCC9A /* View Controllers */,
 				836467021DEA894E008DCC9A /* Assets.xcassets */,
+				83F704591DF6614300B44C1F /* Main.storyboard */,
 				836467041DEA894E008DCC9A /* LaunchScreen.storyboard */,
+				836466FB1DEA894E008DCC9A /* AppDelegate.swift */,
+				8364672E1DEAA1EA008DCC9A /* Button.swift */,
 				836467071DEA894E008DCC9A /* Info.plist */,
 			);
 			path = FlipWord;
@@ -123,6 +128,15 @@
 				8364671D1DEA894E008DCC9A /* Info.plist */,
 			);
 			path = FlipWordUITests;
+			sourceTree = "<group>";
+		};
+		8364672B1DEA8A72008DCC9A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				836466FD1DEA894E008DCC9A /* GameViewController.swift */,
+				83F704571DF659B900B44C1F /* EndViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,7 @@
 				TargetAttributes = {
 					836466F71DEA894D008DCC9A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = LP22J464X7;
 					};
 					8364670B1DEA894E008DCC9A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -229,9 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83F7045A1DF6614300B44C1F /* Main.storyboard in Resources */,
 				836467061DEA894E008DCC9A /* LaunchScreen.storyboard in Resources */,
 				836467031DEA894E008DCC9A /* Assets.xcassets in Resources */,
-				836467011DEA894E008DCC9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836466FE1DEA894E008DCC9A /* ViewController.swift in Sources */,
+				83F704581DF659B900B44C1F /* EndViewController.swift in Sources */,
+				836466FE1DEA894E008DCC9A /* GameViewController.swift in Sources */,
+				8364672F1DEAA1EA008DCC9A /* Button.swift in Sources */,
 				836466FC1DEA894E008DCC9A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +310,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		836466FF1DEA894E008DCC9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				836467001DEA894E008DCC9A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		836467041DEA894E008DCC9A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -401,10 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlipWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChrisChueh.FlipWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlipWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChrisChueh.FlipWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +499,7 @@
 				836467221DEA894E008DCC9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		836467231DEA894E008DCC9A /* Build configuration list for PBXNativeTarget "FlipWordTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +508,7 @@
 				836467251DEA894E008DCC9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		836467261DEA894E008DCC9A /* Build configuration list for PBXNativeTarget "FlipWordUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +517,7 @@
 				836467281DEA894E008DCC9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
