@@ -16,9 +16,9 @@ class GameViewController: UIViewController {
     let light = UIImage(named: "Lit")
     var tag = 5
     var numberLit = 4
-    var tempH: CGFloat = 0
-    var tempW: CGFloat = 0
+    var start: CGFloat = 0
     var reset: CGFloat = 0
+    var width: CGFloat = 0
     
     @IBAction func addButton(_ sender: Any) {
         if (numberButtons.count == 12) {
@@ -34,10 +34,10 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        reset += self.view.bounds.height / 4 + 300
-        tempH += reset
-        tempW += self.view.bounds.width / 6
+
+        start += self.view.bounds.height / 8
+        reset = start
+        width += self.view.bounds.width / 6
         
         initialVC()
         refresh()
@@ -90,15 +90,15 @@ class GameViewController: UIViewController {
     }
     
     fileprivate func initialVC() {
-        let h = self.view.bounds.height / 4
         for i in 1..<5 {
-            let x = createButton(light!, tempH, tempW)
+            let x = createButton(light!, start, width)
             numberButtons += [x]
             x.tag = i
-            tempH += h
+            start += self.view.bounds.height / 8
         }
-        tempH = reset
-        tempW += self.view.bounds.width / 6
+        
+        start = reset
+        width += self.view.bounds.width / 6
     }
     
     fileprivate func refresh() {
@@ -108,37 +108,31 @@ class GameViewController: UIViewController {
     }
     
     fileprivate func addLight() {
-        let h = self.view.bounds.height / 4 
         let w = self.view.bounds.width / 6
         
         if (numberButtons.count == 8) {
-            tempH = reset
-            tempW += w
+            start = reset
+            width += w
         }
         
-        let y = createButton(light!, tempH, tempW)
+        let y = createButton(light!, start, width)
         numberButtons += [y]
         y.tag = tag
         tag += 1
         numberLit += 1
-        tempH += h
+        start += reset
         _ = assignAssociations(y)
     }
     
-    fileprivate func createButton(_ image: UIImage,_ h: CGFloat,_ l: CGFloat) -> CustomButton {
+    fileprivate func createButton(_ image: UIImage,_ y: CGFloat,_ x: CGFloat) -> CustomButton {
         
         let makeButton = CustomButton()
-
-        makeButton.translatesAutoresizingMaskIntoConstraints = false
+       
+        makeButton.frame = CGRect(x: x, y: y, width: 30, height: 30)
+        makeButton.translatesAutoresizingMaskIntoConstraints = true
         
         self.view.addSubview(makeButton)
-        
-        let heightC = NSLayoutConstraint(item: makeButton, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: h)
-        let leftC = NSLayoutConstraint(item: makeButton, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.leading, multiplier: 1.0, constant: l)
-        
-        makeButton.addConstraint(heightC)
-        self.view.addConstraint(leftC)
-
+ 
         makeButton.setImage(image, for: UIControlState())
         makeButton.addTarget(self, action: #selector(switchLights), for: .touchUpInside)
         
