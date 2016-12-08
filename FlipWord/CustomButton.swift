@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class Button: UIButton {
-    var status: Bool?
-
+class CustomButton: UIButton {
+    var status: Bool = true
+    
     override init(frame: CGRect) {
         self.status = true
         
