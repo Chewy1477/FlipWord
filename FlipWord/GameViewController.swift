@@ -34,6 +34,8 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("test")
 
         start += self.view.bounds.height / 8
         reset = start
