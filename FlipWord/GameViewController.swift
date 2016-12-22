@@ -36,6 +36,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         print("test")
+        print("working")
 
         start += self.view.bounds.height / 8
         reset = start
